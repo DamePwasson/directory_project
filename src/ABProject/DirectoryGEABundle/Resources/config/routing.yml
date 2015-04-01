@@ -1,0 +1,3 @@
+ab_project_directory_gea_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ABProjectDirectoryGEABundle:Default:index }

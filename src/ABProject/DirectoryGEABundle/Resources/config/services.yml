@@ -1,0 +1,4 @@
+services:
+#    ab_project_directory_gea.example:
+#        class: ABProject\DirectoryGEABundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

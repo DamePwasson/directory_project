@@ -1,3 +1,7 @@
+ab_project_directory_gea:
+    resource: "@ABProjectDirectoryGEABundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
