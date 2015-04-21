@@ -12,17 +12,24 @@ ABProject\DirectoryGEABundle\Entity\ActiviteRealisee:
       joinColumn:
         name: etudiant_id
         referencedColumnName: id
+      nullable: false
     activite:
       targetEntity: Activite
       inversedBy: activite_realisees
       joinColumn:
         name: activite_id
         referencedColumnName: id
+      nullable: false
   fields:
     annee_debut:
       type: integer
+      length: 4
+      nullable: true
     annee_fin:
       type: integer
+      length: 4
+      nullable: true
     description:
       type: string
       length: 255
+      nullable: true
