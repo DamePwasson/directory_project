@@ -1,0 +1,18 @@
+ABProject\DirectoryGEABundle\Entity\Promotion:
+  type: entity
+  table: promotion
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    nom_promotion:
+      type: string
+      length: 255
+    annee_promotion:
+      type: integer
+      length: 4
+  oneToMany:
+    etudiants:
+      targetEntity: Etudiant
+      mappedBy: promotion

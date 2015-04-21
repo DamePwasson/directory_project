@@ -1,0 +1,39 @@
+ABProject\DirectoryGEABundle\Entity\Etudiant:
+  type: entity
+  table: etudiant
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    nom_etudiant:
+      type: string
+      length: 255
+      nullable: false
+    prenom_etudiant:
+      type: string
+      length: 255
+    niveau_etude:
+      type: integer
+      length: 1
+    contact:
+      type: string
+      length: 255
+      unique: true
+  manyToOne:
+    promotion:
+      targetEntity: Promotion
+      inversedBy: etudiants
+      joinColumn:
+        name: promotion_id
+        referencedColumnName: id
+    specialite:
+      targetEntity: Specialite
+      inversedBy: etudiants
+      joinColumn:
+        name: specialite_id
+        referencedColumnName: id
+  oneToMany:
+    activite_realisees:
+      targetEntity: ActiviteRealisee
+      mappedBy: etudiant

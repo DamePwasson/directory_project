@@ -1,0 +1,28 @@
+ABProject\DirectoryGEABundle\Entity\ActiviteRealisee:
+  type: entity
+  table: activite_realisee
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  manyToOne:
+    etudiant:
+      targetEntity: Etudiant
+      inversedBy: activite_realisees
+      joinColumn:
+        name: etudiant_id
+        referencedColumnName: id
+    activite:
+      targetEntity: Activite
+      inversedBy: activite_realisees
+      joinColumn:
+        name: activite_id
+        referencedColumnName: id
+  fields:
+    annee_debut:
+      type: integer
+    annee_fin:
+      type: integer
+    description:
+      type: string
+      length: 255

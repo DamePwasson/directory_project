@@ -1,0 +1,17 @@
+ABProject\DirectoryGEABundle\Entity\Specialite:
+  type: entity
+  table: specialite
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    nom_specialite:
+      type: string
+      length: 255
+      unique: true
+      nullable: false
+  oneToMany:
+    etudiants:
+      targetEntity: Etudiant
+      mappedBy: specialite
