@@ -57,10 +57,15 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
  
     $em->flush();
  
-    $this->addReference('category-design', $design);
-    $this->addReference('category-programming', $programming);
-    $this->addReference('category-manager', $manager);
-    $this->addReference('category-administrator', $administrator);
+    $this->addReference('promo-quatrevingtdixsept', $quatrevingtdixsept);
+    $this->addReference('promo-quatrevingtdixneuf', $quatrevingtdixneuf);
+    $this->addReference('promo-deuxmille', $deuxmille);
+    $this->addReference('promo-deuxmillequatre', $deuxmillequatre);
+    $this->addReference('promo-deuxmillecinq', $deuxmillecinq);
+    $this->addReference('promo-deuxmillesix', $deuxmillesix);
+    $this->addReference('promo-deuxmilledix', $deuxmilledix);
+    $this->addReference('promo-deuxmilleonze', $deuxmilleonze);
+    $this->addReference('promo-deuxmillequatorze', $deuxmillequatorze);
   }
  
   public function getOrder()

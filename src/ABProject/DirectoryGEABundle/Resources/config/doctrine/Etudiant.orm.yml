@@ -13,13 +13,16 @@ ABProject\DirectoryGEABundle\Entity\Etudiant:
     prenom_etudiant:
       type: string
       length: 255
+      nullable: false
     niveau_etude:
       type: integer
       length: 1
+      nullable: true
     contact:
       type: string
       length: 255
       unique: true
+      nullable: true
     created_at:
       type: datetime
     updated_at:
@@ -32,12 +35,14 @@ ABProject\DirectoryGEABundle\Entity\Etudiant:
       joinColumn:
         name: promotion_id
         referencedColumnName: id
+      nullable: false
     specialite:
       targetEntity: Specialite
       inversedBy: etudiants
       joinColumn:
         name: specialite_id
         referencedColumnName: id
+      nullable: false
   oneToMany:
     activite_realisees:
       targetEntity: ActiviteRealisee
