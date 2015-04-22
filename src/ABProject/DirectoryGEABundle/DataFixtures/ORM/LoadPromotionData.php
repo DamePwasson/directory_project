@@ -1,11 +1,12 @@
+<?php
 namespace ABProject\DirectoryGEABundle\DataFixtures\ORM;
  
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use AbProject\DirectoryGEABundle\Entity\Promotion;
+use ABProject\DirectoryGEABundle\Entity\Promotion;
  
-class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterface
+class LoadPromotionData extends AbstractFixture implements OrderedFixtureInterface
 {
   public function load(ObjectManager $em)
   {
@@ -41,6 +42,10 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
     $deuxmilleonze->setNomPromotion('GEA');
     $deuxmilleonze->setAnneePromotion('2011');
 
+    $deuxmilledouze = new Promotion();
+    $deuxmilledouze->setNomPromotion('GEA');
+    $deuxmilledouze->setAnneePromotion('2012');
+
     $deuxmillequatorze = new Promotion();
     $deuxmillequatorze->setNomPromotion('GEA');
     $deuxmillequatorze->setAnneePromotion('2014');
@@ -53,6 +58,7 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
     $em->persist($deuxmillesix);
     $em->persist($deuxmilledix);
     $em->persist($deuxmilleonze);
+    $em->persist($deuxmilledouze);
     $em->persist($deuxmillequatorze);
  
     $em->flush();
@@ -65,6 +71,7 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
     $this->addReference('promo-deuxmillesix', $deuxmillesix);
     $this->addReference('promo-deuxmilledix', $deuxmilledix);
     $this->addReference('promo-deuxmilleonze', $deuxmilleonze);
+    $this->addReference('promo-deuxmilledouze', $deuxmilledouze);
     $this->addReference('promo-deuxmillequatorze', $deuxmillequatorze);
   }
  
@@ -73,3 +80,4 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
     return 1; // the order in which fixtures will be loaded
   }
 }
+?>

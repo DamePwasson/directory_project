@@ -1,11 +1,12 @@
+<?php
 namespace ABProject\DirectoryGEABundle\DataFixtures\ORM;
  
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use AbProject\DirectoryGEABundle\Entity\Specialite;
+use ABProject\DirectoryGEABundle\Entity\Specialite;
  
-class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterface
+class LoadSpecialiteData extends AbstractFixture implements OrderedFixtureInterface
 {
   public function load(ObjectManager $em)
   {
@@ -35,3 +36,4 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
     return 2; // the order in which fixtures will be loaded
   }
 }
+?>
