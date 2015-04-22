@@ -1,3 +1,7 @@
+ab_project_directory_gea_etudiant:
+    resource: "@ABProjectDirectoryGEABundle/Resources/config/routing/etudiant.yml"
+    prefix:   /etudiant
+
 ab_project_directory_gea_homepage:
     path:     /hello/{name}
     defaults: { _controller: ABProjectDirectoryGEABundle:Default:index }
