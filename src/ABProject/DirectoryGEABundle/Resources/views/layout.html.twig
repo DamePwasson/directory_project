@@ -8,17 +8,16 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block stylesheets %}
-      <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+      <link href="{{ asset('bundles/abprojectdirectorygea/bootstrap/bootstrap.min.css') }}" rel="stylesheet" media="screen">
       <link rel="stylesheet" href="{{ asset('bundles/abprojectdirectorygea/css/main.css') }}" type="text/css" media="all" />
     {% endblock %}
-    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
   </head>
   <body>
     <div id="container">
       <div id="header">
         <div class="content">
-          <h1><a href="{{ path('ens_job') }}">
-            <img src="{{ asset('bundles/ensjobeet/images/logo.jpg') }}" alt="Jobeet Job Board" />
+          <h1><a href="#">
+            <img src="{{ asset('bundles/abprojectdirectorygea/images/logo.png') }}" alt="Annuaire GEA" />
           </a></h1>
         </div>
       </div>
@@ -31,7 +30,6 @@
         </div>
       </div>
     </div>
-      <script src="{{ asset('js/jquery.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.js') }}"></script>
+      <script src="{{ asset('bundles/abprojectdirectorygea/bootstrap/bootstrap.min.js') }}"></script>
   </body>
 </html>
