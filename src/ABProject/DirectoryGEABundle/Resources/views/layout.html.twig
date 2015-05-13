@@ -13,22 +13,35 @@
     {% endblock %}
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <div class="content">
-          <h1><a href="#">
-            <img src="{{ asset('bundles/abprojectdirectorygea/images/logo.png') }}" alt="Annuaire GEA" />
-          </a></h1>
+    <div class="container-fluid">
+      <div class="header row">
+        <div class="col-md-12">
+            <a href="#"><img class="img-responsive center-block" src="{{ asset('bundles/abprojectdirectorygea/images/logo.png') }}" alt="Annuaire GEA" /></a>
+            <h1 class="h1 text-center">Annuaire des anciens étudiants de l'IUT GEA du Mans</h1>
         </div>
       </div>
- 
-      <div id="content">
+
+      <nav class="main-menu">
+        <ul class="nav nav-pills nav-justified">
+          <li role="homepage"><a href="#">Home</a></li>
+          <li role="etudiants"><a href="#">Etudiants</a></li>
+          <li role="contact"><a href="#">Contact</a></li>
+        </ul>
+        <img class="menu-img" src="{{ asset('bundles/abprojectdirectorygea/images/menu.jpg') }}" alt="Annuaire GEA" />
+      </nav>
  
         <div class="content">
             {% block content %}
             {% endblock %}
         </div>
-      </div>
+
+
+        <footer class="main-footer">
+          <ul>
+            <li><a href="mailto:aziliz.blanchet@gmail.com">Contacter l'administrateur</a></li>
+            <li>Projet réalisé par les étudiants de l'IUT GEA du Mans, promotion 2015</li>
+          </ul>
+        </footer>
     </div>
       <script src="{{ asset('bundles/abprojectdirectorygea/bootstrap/bootstrap.min.js') }}"></script>
   </body>

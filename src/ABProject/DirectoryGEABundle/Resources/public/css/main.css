@@ -1,0 +1,32 @@
+.header .h1{
+
+}
+.main-menu .nav{
+	background-color:  #86131c;
+	padding: 0 25%;
+}
+.main-menu a {
+	color: white;
+}
+.main-menu a:hover,
+.main-menu a:active,
+.main-menu a:focus{
+	background-color: #6d1017 !important;
+}
+.main-menu .menu-img{
+	min-width:100%;
+	max-width:100%;
+}
+
+.main-footer{
+	background-color:  #86131c;
+  	padding: 10px 0;
+}
+.main-footer li{
+	color: white;
+	display: inline-block;
+	padding: 0 16%;
+}
+.main-footer li a{
+	color: white;
+}
