@@ -23,8 +23,8 @@
 
       <nav class="main-menu">
         <ul class="nav nav-pills nav-justified">
-          <li role="homepage"><a href="#">Home</a></li>
-          <li role="etudiants"><a href="#">Etudiants</a></li>
+          <li role="homepage"><a href="{{ path('ab_project_directory_gea_homepage') }}">Home</a></li>
+          <li role="etudiants"><a href="{{ path('etudiant') }}">Etudiants</a></li>
           <li role="contact"><a href="#">Contact</a></li>
         </ul>
         <img class="menu-img" src="{{ asset('bundles/abprojectdirectorygea/images/menu.jpg') }}" alt="Annuaire GEA" />
@@ -43,6 +43,7 @@
           </ul>
         </footer>
     </div>
+      <script src="{{ asset('bundles/abprojectdirectorygea/js/jquery.min.js') }}"></script>
       <script src="{{ asset('bundles/abprojectdirectorygea/bootstrap/bootstrap.min.js') }}"></script>
   </body>
 </html>

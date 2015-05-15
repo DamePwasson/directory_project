@@ -19,8 +19,8 @@ class EtudiantType extends AbstractType
             ->add('prenom_etudiant')
             ->add('niveau_etude')
             ->add('contact')
-            ->add('created_at')
-            ->add('updated_at')
+            //->add('created_at')
+            //->add('updated_at')
             ->add('promotion')
             ->add('specialite')
         ;

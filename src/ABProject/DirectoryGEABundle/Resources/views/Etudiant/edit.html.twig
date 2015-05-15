@@ -1,16 +1,14 @@
 {% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
 {% block content -%}
-    <h1>Etudiant edit</h1>
+    <div class="container">
+    <h3>Editer l'étudiant</h3>
 
     {{ form(edit_form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('etudiant') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <button class="btn">
+        <a href="{{ path('etudiant') }}">Retour à la liste</a>
+    </button>
+    {{ form(delete_form) }}
+	</div>
 {% endblock %}

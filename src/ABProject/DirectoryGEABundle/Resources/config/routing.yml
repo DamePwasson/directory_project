@@ -3,5 +3,5 @@ ab_project_directory_gea_etudiant:
     prefix:   /etudiant
 
 ab_project_directory_gea_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: ABProjectDirectoryGEABundle:Default:index }
