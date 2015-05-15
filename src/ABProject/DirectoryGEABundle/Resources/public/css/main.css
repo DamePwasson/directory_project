@@ -110,7 +110,9 @@ a:active, a:hover {
 	min-width:100%;
 	max-width:100%;
 }
-
+.content{
+ 	margin-top: 30px;
+}
 .main-footer{
 	background-color:  #86131c;
   	padding: 10px 0;

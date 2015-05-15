@@ -5,3 +5,7 @@ ab_project_directory_gea_etudiant:
 ab_project_directory_gea_homepage:
     path:     /
     defaults: { _controller: ABProjectDirectoryGEABundle:Default:index }
+
+ab_project_directory_gea_contact:
+    path:     /contact
+    defaults: { _controller: ABProjectDirectoryGEABundle:Contact:contact }
