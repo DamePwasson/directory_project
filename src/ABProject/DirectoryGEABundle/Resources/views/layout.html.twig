@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="header row">
         <div class="col-md-12">
-            <a href="#"><img class="img-responsive center-block" src="{{ asset('bundles/abprojectdirectorygea/images/logo.png') }}" alt="Annuaire GEA" /></a>
+            <a href="{{ path('ab_project_directory_gea_homepage') }}"><img class="img-responsive center-block" src="{{ asset('bundles/abprojectdirectorygea/images/logo.png') }}" alt="Annuaire GEA" /></a>
             <h1 class="h1 text-center">Annuaire des anciens étudiants de l'IUT GEA du Mans</h1>
         </div>
       </div>
@@ -37,10 +37,10 @@
 
 
         <footer class="main-footer">
-          <ul>
-            <li><a href="mailto:aziliz.blanchet@gmail.com">Contacter l'administrateur</a></li>
-            <li>Projet réalisé par les étudiants de l'IUT GEA du Mans, promotion 2015</li>
-          </ul>
+          <div class="row">
+            <div class="col-md-6 text-center"><a href="mailto:aziliz.blanchet@gmail.com">Contacter l'administrateur</a></div>
+            <div class="col-md-6 text-center">Projet réalisé par les étudiants de l'IUT GEA du Mans, promotion 2015</div>
+          </div>
         </footer>
     </div>
       <script src="{{ asset('bundles/abprojectdirectorygea/js/jquery.min.js') }}"></script>

@@ -1,6 +1,30 @@
 {% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
 {% block content -%}
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+        <h3>Rechercher par :</h3>
+        <form class="form-horizontal" action="" method="get">
+            <div class="form-group">
+                <label for="specialite" class="col-md-2 control-label">Spécialité :</label>
+                <label for="promotion" class="col-md-2 control-label">Promotion :</label>
+                <div class="col-md-4">
+                    <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                <h5>Nom :</h5>
+                <input class="form-control" type="text" name="nom" id="search_nom" />
+                <input class="btn" type="submit" value="search" />
+            </div>
+        </form>
+        </div>
+    </div>
+
     <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div>
 
     <div class="row">
