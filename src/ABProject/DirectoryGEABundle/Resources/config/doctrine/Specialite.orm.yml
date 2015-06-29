@@ -1,5 +1,6 @@
 ABProject\DirectoryGEABundle\Entity\Specialite:
   type: entity
+  repositoryClass: ABProject\DirectoryGEABundle\Repository\SpecialiteRepository
   table: specialite
   id:
     id:

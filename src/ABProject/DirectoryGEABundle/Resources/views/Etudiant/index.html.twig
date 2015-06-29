@@ -1,7 +1,7 @@
 {% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
 {% block content -%}
-    <div class="row">
+<!--    <div class="row">
         <div class="col-md-4 col-md-offset-4">
         <h3>Rechercher par :</h3>
         <form class="form-horizontal" action="" method="get">
@@ -28,15 +28,15 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
         <h3>Rechercher par :</h3>
-        <form class="form-horizontal" action="{{ path('EtudiantSearch_new') }}" method="post" {{ form_enctype(form) }}>
+        <form class="form-horizontal" action="" method="post">
 
-                {{ form_widget(form) }}
+
 
                 <input class="btn" type="submit" value="search" />
             </div>
         </form>
         </div>
-    </div>
+    </div> -->
 
     <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div>
 
