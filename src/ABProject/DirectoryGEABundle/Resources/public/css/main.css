@@ -113,10 +113,23 @@ a:active, a:hover {
 .content{
  	margin-top: 30px;
 }
+.navigation-pagination{
+  margin-top: 3em;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color: #86131c;
+  border-color: #86131c;
+}
+.pagination>li>a, .pagination>li>span {
+  color: #86131c;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+  color: black;
+}
 .main-footer{
 	background-color:  #86131c;
   	padding: 10px 0;
- 	margin-top: 30px;
+ 	margin-top: 1em;
 }
 .main-footer a,
 .main-footer{

@@ -23,11 +23,11 @@ class EtudiantController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->findAll();
+        $findEntities = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->findAll();
 
-        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array(
-            'entities' => $entities,
-        ));
+        $entities  = $this->get('knp_paginator')->paginate($findEntities, $this->get('request')->query->get('page', 1),12);
+
+        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array('entities' => $entities,));
     }
     /**
      * Creates a new Etudiant entity.
