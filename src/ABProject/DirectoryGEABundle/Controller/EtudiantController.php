@@ -67,7 +67,7 @@ class EtudiantController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Ajouter'));
 
         return $form;
     }
@@ -98,7 +98,7 @@ class EtudiantController extends Controller
         $entity = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Etudiant entity.');
+            throw $this->createNotFoundException('Etudiant introuvable.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -120,7 +120,7 @@ class EtudiantController extends Controller
         $entity = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Etudiant entity.');
+            throw $this->createNotFoundException('Etudiant introuvable.');
         }
 
         $editForm = $this->createEditForm($entity);
@@ -147,7 +147,7 @@ class EtudiantController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Mettre à jour'));
 
         return $form;
     }
@@ -162,7 +162,7 @@ class EtudiantController extends Controller
         $entity = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Etudiant entity.');
+            throw $this->createNotFoundException('Etudiant introuvable.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -195,7 +195,7 @@ class EtudiantController extends Controller
             $entity = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Etudiant entity.');
+                throw $this->createNotFoundException('Etudiant introuvable.');
             }
 
             $em->remove($entity);
@@ -217,7 +217,7 @@ class EtudiantController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('etudiant_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Supprimer'))
             ->getForm()
         ;
     }

@@ -15,14 +15,14 @@ class EtudiantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom_etudiant')
-            ->add('prenom_etudiant')
-            ->add('niveau_etude')
-            ->add('contact')
+            ->add('nom_etudiant', null, array('label' => 'Nom'))
+            ->add('prenom_etudiant', null, array('label' => 'Prénom'))
+            ->add('niveau_etude', null, array('label' => 'Niveau d\'étude (Bac +)'))
+            ->add('contact', null, array('label' => 'E-Mail de contact'))
             //->add('created_at')
             //->add('updated_at')
-            ->add('promotion')
-            ->add('specialite')
+            ->add('promotion', null, array('label' => 'Promotion'))
+            ->add('specialite', null, array('label' => 'Spécialité'))
         ;
     }
     

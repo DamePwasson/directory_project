@@ -2,14 +2,14 @@
 
 {% block content -%}
 
-    <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div>
+    <!--- <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div> -->
 
     <div class="row">
         {% for entity in entities %}
             <div class="entity col-md-3 col-md-offset-1">
                     <h4><a href="{{ path('etudiant_show', { 'id': entity.id }) }}">{{ entity.prenometudiant }} {{ entity.nometudiant }}</a></h4>
                     <p>{{ entity.specialite }}</br>Promotion {{ entity.promotion }}</p>
-                    <button class="btn"><a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">Edit</a></button>
+                    <!-- <button class="btn"><a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">Edit</a></button> -->
                 
             </div>
         {% endfor %}

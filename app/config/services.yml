@@ -7,3 +7,8 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    abproject.directorygea.admin.etudiant:
+        class: ABProject\DirectoryGEABundle\Admin\EtudiantAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: DirectoryGEA, label: Etudiants }
+        arguments: [null, ABProject\DirectoryGEABundle\Entity\Etudiant, ABProjectDirectoryGEABundle:EtudiantAdmin]
