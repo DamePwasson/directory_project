@@ -3,11 +3,13 @@
 {% block content -%}
 
     <!--- <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div> -->
-
+    <div class="student-details">
+        
+    </div>
     <div class="row">
         {% for entity in entities %}
-            <div class="entity col-md-3 col-md-offset-1">
-                    <h4><a href="{{ path('etudiant_show', { 'id': entity.id }) }}">{{ entity.prenometudiant }} {{ entity.nometudiant }}</a></h4>
+            <div class="entity student col-md-3 col-md-offset-1" data-id="{{ entity.id }}">
+                    <h4>{{ entity.prenometudiant }} {{ entity.nometudiant }}</h4>
                     <p>{{ entity.specialite }}</br>Promotion {{ entity.promotion }}</p>
                     <!-- <button class="btn"><a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">Edit</a></button> -->
                 
@@ -17,5 +19,7 @@
     <div class="navigation-pagination text-center">
         {{ knp_pagination_render(entities) }}
     </div>
+
+
 
 {% endblock %}

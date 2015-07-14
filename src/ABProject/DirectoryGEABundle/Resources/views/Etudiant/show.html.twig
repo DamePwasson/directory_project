@@ -1,11 +1,11 @@
-{% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
-{% block content -%}
+
+
 <div class="row">
 <div class="card-panel col-md-6 col-md-offset-3">
-        <a class="close" href="{{ path('etudiant') }}">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </a>
+        
+    <span class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
+        
     <h3 class="red">{{ entity.prenometudiant }} {{ entity.nometudiant }}</h3>
     <p>Promotion : {{ entity.promotion }}</br>Spécialité : {{ entity.specialite }}</br>Niveau : Bac +{{ entity.niveauetude }}</p>
 
@@ -19,4 +19,3 @@
     </div>
 </div>
 </div>
-{% endblock %}
