@@ -5,6 +5,10 @@ ABProject\DirectoryGEABundle\Entity\Activite:
     id:
       type: integer
       generator: { strategy: AUTO }
+  oneToMany:
+    etudiants:
+      targetEntity: Etudiant
+      mappedBy: activite
   fields:
     nom_activite:
       type: string
@@ -14,7 +18,15 @@ ABProject\DirectoryGEABundle\Entity\Activite:
       type: string
       length: 255
       nullable: false
-  oneToMany:
-    activite_realisees:
-      targetEntity: ActiviteRealisee
-      mappedBy: activite
+    annee_debut:
+      type: integer
+      length: 4
+      nullable: true
+    annee_fin:
+      type: integer
+      length: 4
+      nullable: true
+    description:
+      type: string
+      length: 255
+      nullable: true

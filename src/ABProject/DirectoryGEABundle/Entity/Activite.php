@@ -25,16 +25,31 @@ class Activite
     private $type_activite;
 
     /**
+     * @var integer
+     */
+    private $annee_debut;
+
+    /**
+     * @var integer
+     */
+    private $annee_fin;
+
+    /**
+     * @var string
+     */
+    private $description;
+
+    /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $activite_realisees;
+    private $etudiants;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->activite_realisees = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->etudiants = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -94,35 +109,104 @@ class Activite
     }
 
     /**
-     * Add activite_realisees
+     * Set annee_debut
      *
-     * @param \ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees
+     * @param integer $anneeDebut
      * @return Activite
      */
-    public function addActiviteRealisee(\ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees)
+    public function setAnneeDebut($anneeDebut)
     {
-        $this->activite_realisees[] = $activiteRealisees;
+        $this->annee_debut = $anneeDebut;
 
         return $this;
     }
 
     /**
-     * Remove activite_realisees
+     * Get annee_debut
      *
-     * @param \ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees
+     * @return integer 
      */
-    public function removeActiviteRealisee(\ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees)
+    public function getAnneeDebut()
     {
-        $this->activite_realisees->removeElement($activiteRealisees);
+        return $this->annee_debut;
     }
 
     /**
-     * Get activite_realisees
+     * Set annee_fin
+     *
+     * @param integer $anneeFin
+     * @return Activite
+     */
+    public function setAnneeFin($anneeFin)
+    {
+        $this->annee_fin = $anneeFin;
+
+        return $this;
+    }
+
+    /**
+     * Get annee_fin
+     *
+     * @return integer 
+     */
+    public function getAnneeFin()
+    {
+        return $this->annee_fin;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Activite
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Add etudiants
+     *
+     * @param \ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants
+     * @return Activite
+     */
+    public function addEtudiant(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants)
+    {
+        $this->etudiants[] = $etudiants;
+
+        return $this;
+    }
+
+    /**
+     * Remove etudiants
+     *
+     * @param \ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants
+     */
+    public function removeEtudiant(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants)
+    {
+        $this->etudiants->removeElement($etudiants);
+    }
+
+    /**
+     * Get etudiants
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getActiviteRealisees()
+    public function getEtudiants()
     {
-        return $this->activite_realisees;
+        return $this->etudiants;
     }
 }

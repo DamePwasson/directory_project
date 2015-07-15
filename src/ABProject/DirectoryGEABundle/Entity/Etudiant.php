@@ -45,11 +45,6 @@ class Etudiant
     private $updated_at;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $activite_realisees;
-
-    /**
      * @var \ABProject\DirectoryGEABundle\Entity\Promotion
      */
     private $promotion;
@@ -60,12 +55,10 @@ class Etudiant
     private $specialite;
 
     /**
-     * Constructor
+     * @var \ABProject\DirectoryGEABundle\Entity\Activite
      */
-    public function __construct()
-    {
-        $this->activite_realisees = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+    private $activite;
+
 
     /**
      * Get id
@@ -216,39 +209,6 @@ class Etudiant
     }
 
     /**
-     * Add activite_realisees
-     *
-     * @param \ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees
-     * @return Etudiant
-     */
-    public function addActiviteRealisee(\ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees)
-    {
-        $this->activite_realisees[] = $activiteRealisees;
-
-        return $this;
-    }
-
-    /**
-     * Remove activite_realisees
-     *
-     * @param \ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees
-     */
-    public function removeActiviteRealisee(\ABProject\DirectoryGEABundle\Entity\ActiviteRealisee $activiteRealisees)
-    {
-        $this->activite_realisees->removeElement($activiteRealisees);
-    }
-
-    /**
-     * Get activite_realisees
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getActiviteRealisees()
-    {
-        return $this->activite_realisees;
-    }
-
-    /**
      * Set promotion
      *
      * @param \ABProject\DirectoryGEABundle\Entity\Promotion $promotion
@@ -293,21 +253,33 @@ class Etudiant
     {
         return $this->specialite;
     }
+
+    /**
+     * Set activite
+     *
+     * @param \ABProject\DirectoryGEABundle\Entity\Activite $activite
+     * @return Etudiant
+     */
+    public function setActivite(\ABProject\DirectoryGEABundle\Entity\Activite $activite = null)
+    {
+        $this->activite = $activite;
+
+        return $this;
+    }
+
+    /**
+     * Get activite
+     *
+     * @return \ABProject\DirectoryGEABundle\Entity\Activite 
+     */
+    public function getActivite()
+    {
+        return $this->activite;
+    }
     /**
      * @ORM\PrePersist
      */
     public function setCreatedAtValue()
-    {
-        if(!$this->getCreatedAt())
-          {
-            $this->created_at = new \DateTime();
-          }
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setUpdatedAtValue()
     {
         $this->created_at = new \DateTime();
     }

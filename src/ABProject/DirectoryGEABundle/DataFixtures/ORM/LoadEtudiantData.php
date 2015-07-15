@@ -18,6 +18,7 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $marie->setCreatedAt(new \DateTime('2015-04-21'));
     $marie->setPromotion($em->merge($this->getReference('promo-deuxmille')));
     $marie->setSpecialite($em->merge($this->getReference('specialite-pmo')));
+    $marie->setActivite($em->merge($this->getReference('activite-marie')));
 
     $guillaume = new Etudiant();
     $guillaume->setNomEtudiant('Launay');
@@ -324,7 +325,7 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
  
   public function getOrder()
   {
-    return 3; // the order in which fixtures will be loaded
+    return 4; // the order in which fixtures will be loaded
   }
 }
 ?>
