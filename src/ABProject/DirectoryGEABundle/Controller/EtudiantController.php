@@ -22,11 +22,19 @@ class EtudiantController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $spes = $em->getRepository('ABProjectDirectoryGEABundle:Specialite')->getWithStudents();
+         /*
+          foreach($spes as $spe)
+          {
+            $spe->setActiveJobs($em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->getActiveJobs($category->getId()));
+          }
+          */
+
         $findEntities = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->findAll();
 
         $entities  = $this->get('knp_paginator')->paginate($findEntities, $this->get('request')->query->get('page', 1),12);
 
-        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array('entities' => $entities,));
+        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array('entities' => $entities, 'spes' => $spes));
     }
 
     /**

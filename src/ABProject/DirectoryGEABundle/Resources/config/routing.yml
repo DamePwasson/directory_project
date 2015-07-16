@@ -9,3 +9,7 @@ ab_project_directory_gea_homepage:
 ab_project_directory_gea_contact:
     path:     /contact
     defaults: { _controller: ABProjectDirectoryGEABundle:Contact:contact }
+
+ab_project_directory_gea_specialite:
+    path:     /specialite/{slug}
+    defaults: { _controller: ABProjectDirectoryGEABundle:Specialite:show }

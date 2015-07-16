@@ -12,9 +12,9 @@ use Doctrine\ORM\EntityRepository;
  */
 class SpecialiteRepository extends EntityRepository
 {
-	public function getWithStudent()
+	public function getWithStudents()
 	  {
-	    $query = $this->getEntityManager()->createQuery('SELECT c FROM ABProjectDirectoryGEABundle:Specialite c LEFT JOIN c.specialites');
+	    $query = $this->getEntityManager()->createQuery('SELECT c FROM ABProjectDirectoryGEABundle:Specialite c LEFT JOIN c.etudiants');
 	 
 	    return $query->getResult();
 	  }

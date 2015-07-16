@@ -3,12 +3,11 @@
 namespace ABProject\DirectoryGEABundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use ABProject\DirectoryGEABundle\Utils\DirectoryGEA as DirectoryGEA;
 
 /**
- * Specialite
+ * Promotion
  */
-class Specialite
+class Promotion
 {
     /**
      * @var integer
@@ -18,7 +17,12 @@ class Specialite
     /**
      * @var string
      */
-    private $nom_specialite;
+    private $nom_promotion;
+
+    /**
+     * @var integer
+     */
+    private $annee_promotion;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -44,33 +48,56 @@ class Specialite
     }
 
     /**
-     * Set nom_specialite
+     * Set nom_promotion
      *
-     * @param string $nomSpecialite
-     * @return Specialite
+     * @param string $nomPromotion
+     * @return Promotion
      */
-    public function setNomSpecialite($nomSpecialite)
+    public function setNomPromotion($nomPromotion)
     {
-        $this->nom_specialite = $nomSpecialite;
+        $this->nom_promotion = $nomPromotion;
 
         return $this;
     }
 
     /**
-     * Get nom_specialite
+     * Get nom_promotion
      *
      * @return string 
      */
-    public function getNomSpecialite()
+    public function getNomPromotion()
     {
-        return $this->nom_specialite;
+        return $this->nom_promotion;
+    }
+
+    /**
+     * Set annee_promotion
+     *
+     * @param integer $anneePromotion
+     * @return Promotion
+     */
+    public function setAnneePromotion($anneePromotion)
+    {
+        $this->annee_promotion = $anneePromotion;
+
+        return $this;
+    }
+
+    /**
+     * Get annee_promotion
+     *
+     * @return integer 
+     */
+    public function getAnneePromotion()
+    {
+        return $this->annee_promotion;
     }
 
     /**
      * Add etudiants
      *
      * @param \ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants
-     * @return Specialite
+     * @return Promotion
      */
     public function addEtudiant(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants)
     {
@@ -101,42 +128,7 @@ class Specialite
     
     public function __toString()
     {
-      return $this->getNomSpecialite();
-    }
-
-    /**
-     * @var string
-     */
-    private $slug;
-
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     * @return Specialite
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string 
-     */
-    public function getSlug()
-    {
-        return $this->slug;
-    }
-    /**
-     * @ORM\PrePersist
-     */
-    public function setSlugValue()
-    {
-        $this->slug = DirectoryGEA::slugify($this->getNomSpecialite());
+      $this->annee_string = (string) $this->annee_promotion;
+        return $this->annee_string;
     }
 }

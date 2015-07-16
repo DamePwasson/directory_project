@@ -12,7 +12,14 @@ ABProject\DirectoryGEABundle\Entity\Specialite:
       length: 255
       unique: true
       nullable: false
+    slug:
+      type: string
+      length: 255
+      unique: true
   oneToMany:
     etudiants:
       targetEntity: Etudiant
       mappedBy: specialite
+  lifecycleCallbacks:
+    prePersist: [ setSlugValue ]
+    preUpdate: [ setSlugValue ]
