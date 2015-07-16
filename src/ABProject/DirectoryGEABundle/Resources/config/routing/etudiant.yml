@@ -5,26 +5,3 @@ etudiant:
 etudiant_show:
     path:     /{id}/show
     defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:show" }
-
-etudiant_new:
-    path:     /new
-    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:new" }
-
-etudiant_create:
-    path:     /create
-    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:create" }
-    methods:  POST
-
-etudiant_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:edit" }
-
-etudiant_update:
-    path:     /{id}/update
-    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:update" }
-    methods:  [POST, PUT]
-
-etudiant_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:delete" }
-    methods:  [POST, DELETE]

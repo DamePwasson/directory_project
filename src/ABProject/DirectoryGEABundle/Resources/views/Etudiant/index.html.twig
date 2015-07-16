@@ -1,8 +1,6 @@
 {% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
 {% block content -%}
-
-    <!--- <div class="text-center"><button class="btn"><a href="{{ path('etudiant_new') }}">Ajouter un étudiant</a></button></div> -->
     <div class="student-details">
         
     </div>
@@ -10,8 +8,7 @@
         {% for entity in entities %}
             <div class="entity student col-md-3 col-md-offset-1" data-id="{{ entity.id }}">
                     <h4>{{ entity.prenometudiant }} {{ entity.nometudiant }}</h4>
-                    <p>{{ entity.specialite }}</br>Promotion {{ entity.promotion }}</p>
-                    <!-- <button class="btn"><a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">Edit</a></button> -->
+                    <p></br>Promotion</p>
                 
             </div>
         {% endfor %}

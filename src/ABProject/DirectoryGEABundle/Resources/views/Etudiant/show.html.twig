@@ -1,21 +1,16 @@
 
-
-
 <div class="row">
 <div class="card-panel col-md-6 col-md-offset-3">
         
     <span class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
         
     <h3 class="red">{{ entity.prenometudiant }} {{ entity.nometudiant }}</h3>
-    <p>Promotion : {{ entity.promotion }}</br>Spécialité : {{ entity.specialite }}</br>Niveau : Bac +{{ entity.niveauetude }}</p>
+    <p>Promotion : </br>Spécialité : </br>Niveau : Bac +{{ entity.niveauetude }}</p>
 
     <div class="divider"></div>
     <div class="buttons-list pull-right">
         <button class="btn"><a href="mailto:{{ entity.contact }}"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></button>
 
- <!--       <button class="btn"><a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">Edit</a></button>
-
-        {{ form(delete_form) }} -->
     </div>
 </div>
 </div>
