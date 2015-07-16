@@ -1,6 +1,7 @@
 {% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
 
 {% block content -%}
+
     <div class="student-details">
         
     </div>
@@ -8,7 +9,7 @@
         {% for entity in entities %}
             <div class="entity student col-md-3 col-md-offset-1" data-id="{{ entity.id }}">
                     <h4>{{ entity.prenometudiant }} {{ entity.nometudiant }}</h4>
-                    <p></br>Promotion</p>
+                    <p>{{ entity.specialite }}</br>Promotion {{ entity.promotion }}</p>
                 
             </div>
         {% endfor %}

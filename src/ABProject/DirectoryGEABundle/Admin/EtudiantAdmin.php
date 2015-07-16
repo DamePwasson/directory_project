@@ -25,7 +25,6 @@ class EtudiantAdmin extends Admin
 	            ->add('promotion', null, array('label' => 'Promotion'))
 	            ->add('specialite', null, array('label' => 'Spécialité'))
 	            //->add('created_at')
-            		///->add('updated_at')
 	        ;
 	    }
 	 
@@ -39,7 +38,6 @@ class EtudiantAdmin extends Admin
 	            ->add('promotion', null, array('label' => 'Promotion'))
 	            ->add('specialite', null, array('label' => 'Spécialité'))
 	            ->add('created_at')
-            		->add('updated_at')
 	        ;
 	    }
 	 
@@ -53,7 +51,6 @@ class EtudiantAdmin extends Admin
 	            ->add('promotion', null, array('label' => 'Promotion'))
 	            ->add('specialite', null, array('label' => 'Spécialité'))
 	            ->add('created_at')
-            		->add('updated_at')
 	            ->add('_action', 'actions', array(
 	                'actions' => array(
 	                    'view' => array(),
@@ -74,7 +71,6 @@ class EtudiantAdmin extends Admin
 	            ->add('promotion')
 	            ->add('specialite')
 	            ->add('created_at')
-            		->add('updated_at')
 	        ;
 	    }
 

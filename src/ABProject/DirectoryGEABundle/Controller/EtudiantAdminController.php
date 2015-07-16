@@ -31,7 +31,7 @@ class EtudiantAdminController extends Controller
 	            return new RedirectResponse($this->admin->generateUrl('list',$this->admin->getFilterParameters()));
 	        }
 	 
-	        $this->get('session')->setFlash('sonata_flash_success',  sprintf('The selected jobs validity has been extended until %s.', date('m/d/Y', time() + 86400 * 30)));
+	        $this->get('session')->setFlash('sonata_flash_success',  sprintf('The selected etudiants validity has been extended until %s.', date('m/d/Y', time() + 86400 * 30)));
 	 
 	        return new RedirectResponse($this->admin->generateUrl('list',$this->admin->getFilterParameters()));
 	    }

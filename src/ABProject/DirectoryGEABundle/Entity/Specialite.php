@@ -97,4 +97,9 @@ class Specialite
     {
         return $this->etudiants;
     }
+    
+    public function __toString()
+    {
+      return $this->getNomSpecialite();
+    }
 }

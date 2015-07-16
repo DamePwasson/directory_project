@@ -125,4 +125,10 @@ class Promotion
     {
         return $this->etudiants;
     }
+    
+    public function __toString()
+    {
+      $this->annee_string = (string) $this->annee_promotion;
+        return $this->annee_string;
+    }
 }
