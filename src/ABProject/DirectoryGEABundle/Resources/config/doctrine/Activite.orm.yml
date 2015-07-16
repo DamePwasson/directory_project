@@ -5,10 +5,14 @@ ABProject\DirectoryGEABundle\Entity\Activite:
     id:
       type: integer
       generator: { strategy: AUTO }
-  oneToMany:
+  manyToOne:
     etudiants:
       targetEntity: Etudiant
-      mappedBy: activite
+      inversedBy: activites
+      joinColumn:
+        name: etudiant_id
+        referencedColumnName: id
+      nullable: false
   fields:
     nom_activite:
       type: string

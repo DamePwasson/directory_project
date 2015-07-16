@@ -18,8 +18,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $marie->setCreatedAt(new \DateTime('2015-04-21'));
     $marie->setPromotion($em->merge($this->getReference('promo-deuxmille')));
     $marie->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $marie->setActivite($em->merge($this->getReference('activite-marie')));
-    $marie->setActivite($em->merge($this->getReference('activite-marie-2')));
 
     $guillaume = new Etudiant();
     $guillaume->setNomEtudiant('Launay');
@@ -28,8 +26,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $guillaume->setCreatedAt(new \DateTime('2015-04-21'));
     $guillaume->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $guillaume->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $guillaume->setActivite($em->merge($this->getReference('activite-gui')));
-    $guillaume->setActivite($em->merge($this->getReference('activite-gui-2')));
 
     $florent = new Etudiant();
     $florent->setNomEtudiant('Gautun');
@@ -38,8 +34,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $florent->setCreatedAt(new \DateTime('2015-04-21'));
     $florent->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $florent->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $florent->setActivite($em->merge($this->getReference('activite-florent')));
-    $florent->setActivite($em->merge($this->getReference('activite-florent-2')));
 
     $jb = new Etudiant();
     $jb->setNomEtudiant('Kus');
@@ -49,9 +43,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $jb->setCreatedAt(new \DateTime('2015-04-21'));
     $jb->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $jb->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $jb->setActivite($em->merge($this->getReference('activite-jb')));
-    $jb->setActivite($em->merge($this->getReference('activite-jb-2')));
-    $jb->setActivite($em->merge($this->getReference('activite-jb-3')));
 
     $claire = new Etudiant();
     $claire->setNomEtudiant('Hovasse');
@@ -61,10 +52,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $claire->setCreatedAt(new \DateTime('2015-04-21'));
     $claire->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $claire->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $claire->setActivite($em->merge($this->getReference('activite-claire')));
-    $claire->setActivite($em->merge($this->getReference('activite-claire-2')));
-    $claire->setActivite($em->merge($this->getReference('activite-claire-3')));
-    $claire->setActivite($em->merge($this->getReference('activite-claire-4')));
 
     $alex = new Etudiant();
     $alex->setNomEtudiant('Tabot');
@@ -74,10 +61,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $alex->setCreatedAt(new \DateTime('2015-04-21'));
     $alex->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $alex->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $alex->setActivite($em->merge($this->getReference('activite-alex')));
-    $alex->setActivite($em->merge($this->getReference('activite-alex-2')));
-    $alex->setActivite($em->merge($this->getReference('activite-alex-3')));
-    $alex->setActivite($em->merge($this->getReference('activite-alex-4')));
 
     $thomas = new Etudiant();
     $thomas->setNomEtudiant('Lapsolu');
@@ -86,8 +69,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $thomas->setCreatedAt(new \DateTime('2015-04-21'));
     $thomas->setPromotion($em->merge($this->getReference('promo-deuxmillesix')));
     $thomas->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $thomas->setActivite($em->merge($this->getReference('activite-thomas')));
-    $thomas->setActivite($em->merge($this->getReference('activite-thomas-2')));
 
     $morgan = new Etudiant();
     $morgan->setNomEtudiant('Philippe');
@@ -96,9 +77,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $morgan->setCreatedAt(new \DateTime('2015-04-21'));
     $morgan->setPromotion($em->merge($this->getReference('promo-deuxmillesix')));
     $morgan->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $morgan->setActivite($em->merge($this->getReference('activite-morgan')));
-    $morgan->setActivite($em->merge($this->getReference('activite-morgan-2')));
-    $morgan->setActivite($em->merge($this->getReference('activite-morgan-3')));
 
     $herve = new Etudiant();
     $herve->setNomEtudiant('Daniel');
@@ -107,9 +85,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $herve->setCreatedAt(new \DateTime('2015-04-21'));
     $herve->setPromotion($em->merge($this->getReference('promo-deuxmilledix')));
     $herve->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $herve->setActivite($em->merge($this->getReference('activite-herve')));
-    $herve->setActivite($em->merge($this->getReference('activite-herve-2')));
-    $herve->setActivite($em->merge($this->getReference('activite-herve-3')));
 
     $pierre = new Etudiant();
     $pierre->setNomEtudiant('Caro');
@@ -119,10 +94,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $pierre->setCreatedAt(new \DateTime('2015-04-21'));
     $pierre->setPromotion($em->merge($this->getReference('promo-deuxmilledix')));
     $pierre->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $pierre->setActivite($em->merge($this->getReference('activite-pierre')));
-    $pierre->setActivite($em->merge($this->getReference('activite-pierre-2')));
-    $pierre->setActivite($em->merge($this->getReference('activite-pierre-3')));
-    $pierre->setActivite($em->merge($this->getReference('activite-pierre-4')));
 
     $quentin = new Etudiant();
     $quentin->setNomEtudiant('Plessis');
@@ -132,11 +103,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $quentin->setCreatedAt(new \DateTime('2015-04-21'));
     $quentin->setPromotion($em->merge($this->getReference('promo-deuxmilledix')));
     $quentin->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $quentin->setActivite($em->merge($this->getReference('activite-quentin')));
-    $quentin->setActivite($em->merge($this->getReference('activite-quentin-2')));
-    $quentin->setActivite($em->merge($this->getReference('activite-quentin-3')));
-    $quentin->setActivite($em->merge($this->getReference('activite-quentin-4')));
-    $quentin->setActivite($em->merge($this->getReference('activite-quentin-5')));
 
     $anaelle = new Etudiant();
     $anaelle->setNomEtudiant('Chauvin');
@@ -145,10 +111,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $anaelle->setCreatedAt(new \DateTime('2015-04-21'));
     $anaelle->setPromotion($em->merge($this->getReference('promo-deuxmilledix')));
     $anaelle->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $anaelle->setActivite($em->merge($this->getReference('activite-anaelle')));
-    $anaelle->setActivite($em->merge($this->getReference('activite-anaelle-2')));
-    $anaelle->setActivite($em->merge($this->getReference('activite-anaelle-3')));
-    $anaelle->setActivite($em->merge($this->getReference('activite-anaelle-4')));
 
     $paul = new Etudiant();
     $paul->setNomEtudiant('Cruchet');
@@ -157,10 +119,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $paul->setCreatedAt(new \DateTime('2015-04-21'));
     $paul->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $paul->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $paul->setActivite($em->merge($this->getReference('activite-paul')));
-    $paul->setActivite($em->merge($this->getReference('activite-paul-2')));
-    $paul->setActivite($em->merge($this->getReference('activite-paul-3')));
-    $paul->setActivite($em->merge($this->getReference('activite-paul-4')));
 
     $julien = new Etudiant();
     $julien->setNomEtudiant('Hatry');
@@ -169,9 +127,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $julien->setCreatedAt(new \DateTime('2015-04-21'));
     $julien->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $julien->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $julien->setActivite($em->merge($this->getReference('activite-julien')));
-    $julien->setActivite($em->merge($this->getReference('activite-julien-2')));
-    $julien->setActivite($em->merge($this->getReference('activite-julien-3')));
 
     $ma = new Etudiant();
     $ma->setNomEtudiant('Le Picard');
@@ -180,9 +135,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $ma->setCreatedAt(new \DateTime('2015-04-21'));
     $ma->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $ma->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $ma->setActivite($em->merge($this->getReference('activite-ma')));
-    $ma->setActivite($em->merge($this->getReference('activite-ma-2')));
-    $ma->setActivite($em->merge($this->getReference('activite-ma-3')));
 
     $romain = new Etudiant();
     $romain->setNomEtudiant('Soulard');
@@ -192,9 +144,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $romain->setCreatedAt(new \DateTime('2015-04-21'));
     $romain->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $romain->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $romain->setActivite($em->merge($this->getReference('activite-romain')));
-    $romain->setActivite($em->merge($this->getReference('activite-romain-2')));
-    $romain->setActivite($em->merge($this->getReference('activite-romain-3')));
 
     $corine = new Etudiant();
     $corine->setNomEtudiant('Breton');
@@ -204,9 +153,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $corine->setCreatedAt(new \DateTime('2015-04-21'));
     $corine->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $corine->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $corine->setActivite($em->merge($this->getReference('activite-corine')));
-    $corine->setActivite($em->merge($this->getReference('activite-corine-2')));
-    $corine->setActivite($em->merge($this->getReference('activite-corine-3')));
 
     $simon = new Etudiant();
     $simon->setNomEtudiant('Fourreau');
@@ -216,9 +162,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $simon->setCreatedAt(new \DateTime('2015-04-21'));
     $simon->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $simon->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $simon->setActivite($em->merge($this->getReference('activite-simon')));
-    $simon->setActivite($em->merge($this->getReference('activite-simon-2')));
-    $simon->setActivite($em->merge($this->getReference('activite-simon-3')));
 
     $alexandre = new Etudiant();
     $alexandre->setNomEtudiant('Weiss');
@@ -228,7 +171,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $alexandre->setCreatedAt(new \DateTime('2015-04-21'));
     $alexandre->setPromotion($em->merge($this->getReference('promo-deuxmillequatorze')));
     $alexandre->setSpecialite($em->merge($this->getReference('specialite-pmo')));
-    $alexandre->setActivite($em->merge($this->getReference('activite-alexandre')));
 
     $floriane = new Etudiant();
     $floriane->setNomEtudiant('Joubert');
@@ -238,9 +180,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $floriane->setCreatedAt(new \DateTime('2015-04-21'));
     $floriane->setPromotion($em->merge($this->getReference('promo-quatrevingtdixsept')));
     $floriane->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $floriane->setActivite($em->merge($this->getReference('activite-flo')));
-    $floriane->setActivite($em->merge($this->getReference('activite-flo-2')));
-    $floriane->setActivite($em->merge($this->getReference('activite-flo-3')));
 
     $jm = new Etudiant();
     $jm->setNomEtudiant('Rakatomanga');
@@ -250,8 +189,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $jm->setCreatedAt(new \DateTime('2015-04-21'));
     $jm->setPromotion($em->merge($this->getReference('promo-deuxmillecinq')));
     $jm->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $jm->setActivite($em->merge($this->getReference('activite-jm')));
-    $jm->setActivite($em->merge($this->getReference('activite-jm-2')));
 
     $charlotte = new Etudiant();
     $charlotte->setNomEtudiant('Le Garrec');
@@ -261,9 +198,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $charlotte->setCreatedAt(new \DateTime('2015-04-21'));
     $charlotte->setPromotion($em->merge($this->getReference('promo-deuxmilledix')));
     $charlotte->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $charlotte->setActivite($em->merge($this->getReference('activite-cha')));
-    $charlotte->setActivite($em->merge($this->getReference('activite-cha-2')));
-    $charlotte->setActivite($em->merge($this->getReference('activite-cha-3')));
 
     $elodie = new Etudiant();
     $elodie->setNomEtudiant('Lemetayer');
@@ -273,8 +207,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $elodie->setCreatedAt(new \DateTime('2015-04-21'));
     $elodie->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $elodie->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $elodie->setActivite($em->merge($this->getReference('activite-elodie')));
-    $elodie->setActivite($em->merge($this->getReference('activite-elodie-2')));
 
     $olivier = new Etudiant();
     $olivier->setNomEtudiant('Patoyt');
@@ -283,8 +215,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $olivier->setCreatedAt(new \DateTime('2015-04-22'));
     $olivier->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $olivier->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $olivier->setActivite($em->merge($this->getReference('activite-olivier')));
-    $olivier->setActivite($em->merge($this->getReference('activite-olivier-2')));
 
     $cla = new Etudiant();
     $cla->setNomEtudiant('Caget');
@@ -293,8 +223,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $cla->setCreatedAt(new \DateTime('2015-04-22'));
     $cla->setPromotion($em->merge($this->getReference('promo-deuxmilledouze')));
     $cla->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $cla->setActivite($em->merge($this->getReference('activite-cla')));
-    $cla->setActivite($em->merge($this->getReference('activite-cla-2')));
 
     $martin = new Etudiant();
     $martin->setNomEtudiant('Bouvier');
@@ -304,7 +232,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $martin->setCreatedAt(new \DateTime('2015-04-22'));
     $martin->setPromotion($em->merge($this->getReference('promo-deuxmillequatorze')));
     $martin->setSpecialite($em->merge($this->getReference('specialite-fc')));
-    $martin->setActivite($em->merge($this->getReference('activite-martin')));
 
     $franck = new Etudiant();
     $franck->setNomEtudiant('Maudoux');
@@ -313,7 +240,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $franck->setCreatedAt(new \DateTime('2015-04-22'));
     $franck->setPromotion($em->merge($this->getReference('promo-quatrevingtdixneuf')));
     $franck->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $franck->setActivite($em->merge($this->getReference('activite-franck')));
 
     $alexis = new Etudiant();
     $alexis->setNomEtudiant('Papin');
@@ -323,8 +249,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $alexis->setCreatedAt(new \DateTime('2015-04-22'));
     $alexis->setPromotion($em->merge($this->getReference('promo-deuxmillequatre')));
     $alexis->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $alexis->setActivite($em->merge($this->getReference('activite-alexis')));
-    $alexis->setActivite($em->merge($this->getReference('activite-alexis-2')));
 
     $melanie = new Etudiant();
     $melanie->setNomEtudiant('Hardy');
@@ -333,8 +257,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $melanie->setCreatedAt(new \DateTime('2015-04-22'));
     $melanie->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $melanie->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $melanie->setActivite($em->merge($this->getReference('activite-melanie')));
-    $melanie->setActivite($em->merge($this->getReference('activite-melanie-2')));
 
     $geoffrey = new Etudiant();
     $geoffrey->setNomEtudiant('Forges');
@@ -344,9 +266,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $geoffrey->setCreatedAt(new \DateTime('2015-04-22'));
     $geoffrey->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $geoffrey->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $geoffrey->setActivite($em->merge($this->getReference('activite-geo')));
-    $geoffrey->setActivite($em->merge($this->getReference('activite-geo-2')));
-    $geoffrey->setActivite($em->merge($this->getReference('activite-geo-3')));
 
     $pie = new Etudiant();
     $pie->setNomEtudiant('Lulzac');
@@ -355,8 +274,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $pie->setCreatedAt(new \DateTime('2015-04-22'));
     $pie->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $pie->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $pie->setActivite($em->merge($this->getReference('activite-pie')));
-    $pie->setActivite($em->merge($this->getReference('activite-pie-2')));
 
     $francois = new Etudiant();
     $francois->setNomEtudiant('Sadeler');
@@ -366,8 +283,6 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
     $francois->setCreatedAt(new \DateTime('2015-04-22'));
     $francois->setPromotion($em->merge($this->getReference('promo-deuxmilleonze')));
     $francois->setSpecialite($em->merge($this->getReference('specialite-rh')));
-    $francois->setActivite($em->merge($this->getReference('activite-fran')));
-    $francois->setActivite($em->merge($this->getReference('activite-fran-2')));
 
 
     $em->persist($marie);
@@ -405,11 +320,43 @@ class LoadEtudiantData extends AbstractFixture implements OrderedFixtureInterfac
  
     $em->flush();
  
+    $this->addReference('marie', $marie);
+    $this->addReference('gui', $guillaume);
+    $this->addReference('florent', $florent);
+    $this->addReference('jb', $jb);
+    $this->addReference('claire', $claire);
+    $this->addReference('alex', $alex);
+    $this->addReference('thomas', $thomas);
+    $this->addReference('morgan', $morgan);
+    $this->addReference('herve', $herve);
+    $this->addReference('pierre', $pierre);
+    $this->addReference('quentin', $quentin);
+    $this->addReference('anaelle', $anaelle);
+    $this->addReference('paul', $paul);
+    $this->addReference('julien', $julien);
+    $this->addReference('ma', $ma);
+    $this->addReference('romain', $romain);
+    $this->addReference('corine', $corine);
+    $this->addReference('simon', $simon);
+    $this->addReference('alexandre', $alexandre);
+    $this->addReference('floriane', $floriane);
+    $this->addReference('jm', $jm);
+    $this->addReference('cha', $charlotte);
+    $this->addReference('elodie', $elodie);
+    $this->addReference('olivier', $olivier);
+    $this->addReference('cla', $cla);
+    $this->addReference('martin', $martin);
+    $this->addReference('franck', $franck);
+    $this->addReference('alexis', $alexis);
+    $this->addReference('melanie', $melanie);
+    $this->addReference('geo', $geoffrey);
+    $this->addReference('pie', $pie);
+    $this->addReference('fran', $francois);
   }
  
   public function getOrder()
   {
-    return 4; // the order in which fixtures will be loaded
+    return 3; // the order in which fixtures will be loaded
   }
 }
 ?>

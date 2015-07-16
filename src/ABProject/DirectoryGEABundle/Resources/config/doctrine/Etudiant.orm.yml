@@ -43,11 +43,9 @@ ABProject\DirectoryGEABundle\Entity\Etudiant:
         name: specialite_id
         referencedColumnName: id
       nullable: false
+  oneToMany:
     activite:
       targetEntity: Activite
-      inversedBy: etudiants
-      joinColumn:
-        name: specialite_id
-        referencedColumnName: id
+      mappedBy: etudiant
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]

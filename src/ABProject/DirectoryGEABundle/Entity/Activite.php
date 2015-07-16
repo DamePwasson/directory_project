@@ -40,17 +40,10 @@ class Activite
     private $description;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \ABProject\DirectoryGEABundle\Entity\Etudiant
      */
     private $etudiants;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->etudiants = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get id
@@ -178,32 +171,22 @@ class Activite
     }
 
     /**
-     * Add etudiants
+     * Set etudiants
      *
      * @param \ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants
      * @return Activite
      */
-    public function addEtudiant(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants)
+    public function setEtudiants(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants = null)
     {
-        $this->etudiants[] = $etudiants;
+        $this->etudiants = $etudiants;
 
         return $this;
     }
 
     /**
-     * Remove etudiants
-     *
-     * @param \ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants
-     */
-    public function removeEtudiant(\ABProject\DirectoryGEABundle\Entity\Etudiant $etudiants)
-    {
-        $this->etudiants->removeElement($etudiants);
-    }
-
-    /**
      * Get etudiants
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \ABProject\DirectoryGEABundle\Entity\Etudiant 
      */
     public function getEtudiants()
     {

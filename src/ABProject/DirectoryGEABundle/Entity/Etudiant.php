@@ -45,6 +45,11 @@ class Etudiant
     private $updated_at;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $activite;
+
+    /**
      * @var \ABProject\DirectoryGEABundle\Entity\Promotion
      */
     private $promotion;
@@ -55,10 +60,12 @@ class Etudiant
     private $specialite;
 
     /**
-     * @var \ABProject\DirectoryGEABundle\Entity\Activite
+     * Constructor
      */
-    private $activite;
-
+    public function __construct()
+    {
+        $this->activite = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -209,6 +216,39 @@ class Etudiant
     }
 
     /**
+     * Add activite
+     *
+     * @param \ABProject\DirectoryGEABundle\Entity\Activite $activite
+     * @return Etudiant
+     */
+    public function addActivite(\ABProject\DirectoryGEABundle\Entity\Activite $activite)
+    {
+        $this->activite[] = $activite;
+
+        return $this;
+    }
+
+    /**
+     * Remove activite
+     *
+     * @param \ABProject\DirectoryGEABundle\Entity\Activite $activite
+     */
+    public function removeActivite(\ABProject\DirectoryGEABundle\Entity\Activite $activite)
+    {
+        $this->activite->removeElement($activite);
+    }
+
+    /**
+     * Get activite
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getActivite()
+    {
+        return $this->activite;
+    }
+
+    /**
      * Set promotion
      *
      * @param \ABProject\DirectoryGEABundle\Entity\Promotion $promotion
@@ -252,29 +292,6 @@ class Etudiant
     public function getSpecialite()
     {
         return $this->specialite;
-    }
-
-    /**
-     * Set activite
-     *
-     * @param \ABProject\DirectoryGEABundle\Entity\Activite $activite
-     * @return Etudiant
-     */
-    public function setActivite(\ABProject\DirectoryGEABundle\Entity\Activite $activite = null)
-    {
-        $this->activite = $activite;
-
-        return $this;
-    }
-
-    /**
-     * Get activite
-     *
-     * @return \ABProject\DirectoryGEABundle\Entity\Activite 
-     */
-    public function getActivite()
-    {
-        return $this->activite;
     }
     /**
      * @ORM\PrePersist
