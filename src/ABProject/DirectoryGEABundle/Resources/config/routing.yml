@@ -13,3 +13,7 @@ ab_project_directory_gea_contact:
 ab_project_directory_gea_specialite:
     path:     /specialite/{slug}
     defaults: { _controller: ABProjectDirectoryGEABundle:Specialite:show }
+
+ab_project_directory_gea_promotion:
+    path:     /promotion/{slug}
+    defaults: { _controller: ABProjectDirectoryGEABundle:Promotion:show }

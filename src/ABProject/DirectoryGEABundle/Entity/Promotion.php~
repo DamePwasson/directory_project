@@ -3,6 +3,7 @@
 namespace ABProject\DirectoryGEABundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ABProject\DirectoryGEABundle\Utils\DirectoryGEA as DirectoryGEA;
 
 /**
  * Promotion

@@ -9,6 +9,12 @@
                 <button class="btn"><a href="{{ path('ab_project_directory_gea_specialite', { 'slug': spe.slug }) }}">{{ spe }}</a></button>
             {% endfor %}
             </p>
+            <p class="h5">Promotion :    
+            {% for promo in promos %}
+                <a href="{{ path('ab_project_directory_gea_promotion', { 'slug': promo.slug }) }}">{{ promo }}</a> - 
+            {% endfor %}
+            </p>
+            
         </div>
     </div>
 

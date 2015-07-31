@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ABProject\DirectoryGEABundle\Entity\Specialite;
 
 /**
- * Etudiant controller.
+ * Specialite controller.
  *
  */
 class SpecialiteController extends Controller

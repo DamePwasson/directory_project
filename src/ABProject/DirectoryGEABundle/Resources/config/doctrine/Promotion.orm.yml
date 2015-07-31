@@ -1,5 +1,6 @@
 ABProject\DirectoryGEABundle\Entity\Promotion:
   type: entity
+  repositoryClass: ABProject\DirectoryGEABundle\Repository\PromotionRepository
   table: promotion
   id:
     id:
@@ -12,7 +13,14 @@ ABProject\DirectoryGEABundle\Entity\Promotion:
     annee_promotion:
       type: integer
       length: 4
+    slug:
+      type: string
+      length: 255
+      unique: true
   oneToMany:
     etudiants:
       targetEntity: Etudiant
       mappedBy: promotion
+  lifecycleCallbacks:
+    prePersist: [ setSlugValue ]
+    preUpdate: [ setSlugValue ]

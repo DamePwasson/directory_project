@@ -3,6 +3,7 @@
 namespace ABProject\DirectoryGEABundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ABProject\DirectoryGEABundle\Utils\DirectoryGEA as DirectoryGEA;
 
 /**
  * Promotion
@@ -130,5 +131,40 @@ class Promotion
     {
       $this->annee_string = (string) $this->annee_promotion;
         return $this->annee_string;
+    }
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Promotion
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setSlugValue()
+    {
+        $this->slug = DirectoryGEA::slugify($this->__toString());
     }
 }

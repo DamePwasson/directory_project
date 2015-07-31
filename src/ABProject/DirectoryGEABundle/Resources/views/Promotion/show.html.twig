@@ -1,0 +1,24 @@
+{% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
+
+{% block content -%}
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <h3>Promotion {{promotion }}</h3> <button class="btn"><a href="{{ path('etudiant') }}">Retour</a></button>
+        </div>
+    </div>
+
+    <div class="student-details">
+        
+    </div>
+    <div class="row">
+        {% for entity in promotion.etudiants %}
+            <div class="entity student col-md-3 col-md-offset-1" data-id="{{ entity.id }}">
+                    <h4>{{ entity.prenometudiant }} {{ entity.nometudiant }}</h4>
+                    <p>{{ entity.specialite }}</br>Promotion {{ entity.promotion }}</p>
+                
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

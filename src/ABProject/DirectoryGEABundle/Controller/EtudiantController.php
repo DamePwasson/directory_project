@@ -30,11 +30,13 @@ class EtudiantController extends Controller
           }
           */
 
+        $promos = $em->getRepository('ABProjectDirectoryGEABundle:Promotion')->getWithStudents();
+
         $findEntities = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->findAll();
 
         $entities  = $this->get('knp_paginator')->paginate($findEntities, $this->get('request')->query->get('page', 1),12);
 
-        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array('entities' => $entities, 'spes' => $spes));
+        return $this->render('ABProjectDirectoryGEABundle:Etudiant:index.html.twig', array('entities' => $entities, 'spes' => $spes, 'promos' => $promos));
     }
 
     /**
