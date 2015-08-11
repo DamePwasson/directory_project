@@ -9,10 +9,14 @@
                 <button class="btn"><a href="{{ path('ab_project_directory_gea_specialite', { 'slug': spe.slug }) }}">{{ spe }}</a></button>
             {% endfor %}
             </p>
-            <p class="h5">Promotion :    
+            <p class="h5">Promotion :
+                <select class="form-control" onChange="location = this.options[this.selectedIndex].value;">  
             {% for promo in promos %}
-                <a href="{{ path('ab_project_directory_gea_promotion', { 'slug': promo.slug }) }}">{{ promo }}</a> - 
+                    <option value="{{ path('ab_project_directory_gea_promotion', { 'slug': promo.slug }) }}">
+                        {{ promo }}
+                    </option>
             {% endfor %}
+                </select>
             </p>
             
         </div>
