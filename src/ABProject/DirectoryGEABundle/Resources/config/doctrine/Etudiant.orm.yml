@@ -1,5 +1,6 @@
 ABProject\DirectoryGEABundle\Entity\Etudiant:
   type: entity
+  repositoryClass: ABProject\DirectoryGEABundle\Repository\EtudiantRepository
   table: etudiant
   id:
     id:
@@ -49,3 +50,6 @@ ABProject\DirectoryGEABundle\Entity\Etudiant:
       mappedBy: etudiant
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
+    postPersist: [ upload, updateLuceneIndex ]
+    postUpdate: [ upload, updateLuceneIndex ]
+    postRemove: [ removeUpload, deleteLuceneIndex ]

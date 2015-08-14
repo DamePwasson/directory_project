@@ -5,3 +5,7 @@ etudiant:
 etudiant_show:
     path:     /{id}/show
     defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:show" }
+
+etudiant_search:
+    pattern: /search
+    defaults: { _controller: "ABProjectDirectoryGEABundle:Etudiant:search" }

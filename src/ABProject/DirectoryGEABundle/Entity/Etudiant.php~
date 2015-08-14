@@ -300,4 +300,75 @@ class Etudiant
     {
         $this->created_at = new \DateTime();
     }
+
+    static public function getLuceneIndex()
+    {
+        if (file_exists($index = self::getLuceneIndexFile())) {
+            return \Zend_Search_Lucene::open($index);
+        }
+ 
+        return \Zend_Search_Lucene::create($index);
+    }
+ 
+    static public function getLuceneIndexFile()
+    {
+        return __DIR__.'/../../../../web/data/student.index';
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function updateLuceneIndex()
+    {
+        $index = self::getLuceneIndex();
+ 
+        // remove existing entries
+        foreach ($index->find('pk:'.$this->getId()) as $hit)
+        {
+          $index->delete($hit->id);
+        }
+
+        $doc = new \Zend_Search_Lucene_Document();
+ 
+        // store job primary key to identify it in the search results
+        $doc->addField(\Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
+ 
+        // index job fields
+        $doc->addField(\Zend_Search_Lucene_Field::UnStored('nom', $this->getNomEtudiant(), 'utf-8'));
+        $doc->addField(\Zend_Search_Lucene_Field::UnStored('prenom', $this->getPrenomEtudiant(), 'utf-8'));
+        $doc->addField(\Zend_Search_Lucene_Field::UnStored('specialite', $this->getSpecialite(), 'utf-8'));
+        $doc->addField(\Zend_Search_Lucene_Field::UnStored('promotion', $this->getPromotion(), 'utf-8'));
+ 
+        // add job to the index
+        $index->addDocument($doc);
+        $index->commit();
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function deleteLuceneIndex()
+    {
+        $index = self::getLuceneIndex();
+ 
+        foreach ($index->find('pk:'.$this->getId()) as $hit) {
+            $index->delete($hit->id);
+        }
+    }
 }

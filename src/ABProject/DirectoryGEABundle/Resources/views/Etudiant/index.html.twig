@@ -4,12 +4,14 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h3>Rechercher par :</h3>
-            <p class="h5">Spécialité :    
+            <p class="h5">
+                <label>Spécialité :</label>  
             {% for spe in spes %}
                 <button class="btn"><a href="{{ path('ab_project_directory_gea_specialite', { 'slug': spe.slug }) }}">{{ spe }}</a></button>
             {% endfor %}
             </p>
-            <p class="h5">Promotion :
+            <p class="h5">
+                <label>Promotion :</label>
                 <select class="form-control" onChange="location = this.options[this.selectedIndex].value;">  
             {% for promo in promos %}
                     <option value="{{ path('ab_project_directory_gea_promotion', { 'slug': promo.slug }) }}">
@@ -17,6 +19,14 @@
                     </option>
             {% endfor %}
                 </select>
+            </p>
+            <p class="h5">
+                <input type="name" class="form-control" id="inputName">
+                <form action={{ path('erlem_job_search') }} method="get">
+                    <label for="inputName">Nom :</label>
+                    <input type="name" name="query" value='{{ app.request.get('query') }}' class="form-control" id="inputName">
+                    <input type="submit" value="search" />
+                </form>
             </p>
             
         </div>
