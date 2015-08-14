@@ -1,0 +1,7 @@
+{% extends 'ABProjectDirectoryGEABundle::layout.html.twig' %}
+
+{% block content -%}
+
+        {% include 'ABProjectDirectoryGEABundle:Etudiant:list.html.twig' with {'etudiants': etudiants} %}
+
+{% endblock %}

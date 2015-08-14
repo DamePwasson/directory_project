@@ -57,4 +57,18 @@ class EtudiantController extends Controller
             'entity'      => $entity,
         ));
     }
+
+    public function searchAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $query = $this->getRequest()->get('query');
+ 
+        if(!$query) {
+            return $this->redirect($this->generateUrl('etudiant'));
+        }
+ 
+        $jobs = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->getForLuceneQuery($query);
+ 
+        return $this->render('ABProjectDirectoryGEABundle:Etudiant:search.html.twig', array('etudiants' => $etudiants));
+    }
 }
