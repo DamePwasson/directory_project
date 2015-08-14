@@ -4,6 +4,7 @@ namespace ABProject\DirectoryGEABundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 use ABProject\DirectoryGEABundle\Entity\Etudiant;
 
@@ -67,7 +68,7 @@ class EtudiantController extends Controller
             return $this->redirect($this->generateUrl('etudiant'));
         }
  
-        $jobs = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->getForLuceneQuery($query);
+        $etudiants = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->getForLuceneQuery($query);
  
         return $this->render('ABProjectDirectoryGEABundle:Etudiant:search.html.twig', array('etudiants' => $etudiants));
     }

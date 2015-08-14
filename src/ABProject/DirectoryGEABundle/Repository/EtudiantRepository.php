@@ -3,6 +3,7 @@
 namespace ABProject\DirectoryGEABundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use ABProject\DirectoryGEABundle\Entity\Etudiant;
 
 /**
  * EtudiantRepository
@@ -12,4 +13,26 @@ use Doctrine\ORM\EntityRepository;
  */
 class EtudiantRepository extends EntityRepository
 {
+	public function getForLuceneQuery($query)
+    {
+        $hits = Etudiant::getLuceneIndex()->find($query);
+ 
+        $pks = array();
+        foreach ($hits as $hit)
+        {
+          $pks[] = $hit->pk;
+        }
+ 
+        if (empty($pks))
+        {
+          return array();
+        }
+ 
+        $q = $this->createQueryBuilder('e')
+            ->where('e.id IN (:pks)')
+            ->setParameter('pks', $pks)
+            ->getQuery();
+ 
+        return $q->getResult();
+    }
 }

@@ -21,11 +21,10 @@
                 </select>
             </p>
             <p class="h5">
-                <input type="name" class="form-control" id="inputName">
-                <form action={{ path('erlem_job_search') }} method="get">
+                <form action={{ path('etudiant_search') }} method="get">
                     <label for="inputName">Nom :</label>
                     <input type="name" name="query" value='{{ app.request.get('query') }}' class="form-control" id="inputName">
-                    <input type="submit" value="search" />
+                    <input class="btn" type="submit" value="search" />
                 </form>
             </p>
             

@@ -2,6 +2,31 @@
 
 {% block content -%}
 
-        {% include 'ABProjectDirectoryGEABundle:Etudiant:list.html.twig' with {'etudiants': etudiants} %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3>Rechercher par :</h3>
+            <p class="h5">
+                <form action={{ path('etudiant_search') }} method="get">
+                    <label for="inputName">Nom :</label>
+                    <input type="name" name="query" value='{{ app.request.get('query') }}' class="form-control" id="inputName">
+                    <input class="btn" type="submit" value="search" />
+                </form>
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="student-details">
+        
+    </div>
+    <div class="row">
+        {% for etudiant in etudiants %}
+            <div class="entity student col-md-3 col-md-offset-1" data-id="{{ etudiant.id }}">
+                    <h4>{{ etudiant.prenometudiant }} {{ etudiant.nometudiant }}</h4>
+                    <p>{{ etudiant.specialite }}</br>Promotion {{ etudiant.promotion }}</p>
+                
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
