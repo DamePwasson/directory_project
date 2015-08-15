@@ -53,7 +53,6 @@ class EtudiantController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Etudiant entity.');
         }
-
         return $this->render('ABProjectDirectoryGEABundle:Etudiant:show.html.twig', array(
             'entity'      => $entity,
         ));
@@ -69,7 +68,6 @@ class EtudiantController extends Controller
         }
  
         $etudiants = $em->getRepository('ABProjectDirectoryGEABundle:Etudiant')->getForLuceneQuery($query);
- 
         return $this->render('ABProjectDirectoryGEABundle:Etudiant:search.html.twig', array('etudiants' => $etudiants));
     }
 }

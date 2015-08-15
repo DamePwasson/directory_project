@@ -192,4 +192,10 @@ class Activite
     {
         return $this->etudiants;
     }
+
+    public function __toString()
+    {
+      return ($this->getNomActivite() . $this->getDescription());
+    }
+
 }

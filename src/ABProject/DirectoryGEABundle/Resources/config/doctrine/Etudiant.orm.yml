@@ -47,7 +47,7 @@ ABProject\DirectoryGEABundle\Entity\Etudiant:
   oneToMany:
     activite:
       targetEntity: Activite
-      mappedBy: etudiant
+      mappedBy: etudiants
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
     postPersist: [ upload, updateLuceneIndex ]
