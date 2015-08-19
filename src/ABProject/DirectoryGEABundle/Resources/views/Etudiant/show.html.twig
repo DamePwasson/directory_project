@@ -5,26 +5,24 @@
     <span class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
         
     <h3 class="red">{{ entity.prenometudiant }} {{ entity.nometudiant }}</h3>
-    <p>Promotion : {{ entity.promotion }}</br>Spécialité : {{ entity.specialite }}</br>Niveau : Bac +{{ entity.niveauetude }}</br>Activité : </p>
+    <p>Promotion : {{ entity.promotion }}</br>Spécialité : {{ entity.specialite }}</br>Niveau : Bac +{{ entity.niveauetude }}</p>
 
-    Poursuite d'étude :</br>
+    <p>Poursuite d'étude :</br>
     {% for activite in entity.activite %}
     	{% if activite.typeactivite=='Poursuite d\'étude' %}
-	    	{{ activite }} ({{ activite.anneedebut }} - 
-	       	{{ (activite.anneefin is not empty) ? activite.anneefin : 'Aujourd\'hui' }})</br>
-	    	{{ activite.description }}</br></br>
+	    	- {{ activite }} ({{ activite.anneedebut }} - 
+	       	{{ (activite.anneefin is not empty) ? activite.anneefin : 'Aujourd\'hui' }}) <i>{{ activite.description }}</i></br>
     	{% endif %}
-    {% endfor %}
+    {% endfor %} </br>
 
     Carrière :</br>
     {% for activite in entity.activite %}
     	{% if activite.typeactivite!='Poursuite d\'étude' %}
-	    	{{ activite }} ({{ activite.anneedebut }} - 
-	       	{{ (activite.anneefin is not empty) ? activite.anneefin : 'Aujourd\'hui' }})</br>
-	    	{{ activite.description }}</br></br>
+	    	- {{ activite }} ({{ activite.anneedebut }} - 
+	       	{{ (activite.anneefin is not empty) ? activite.anneefin : 'Aujourd\'hui' }}) <i>{{ activite.description }}</i></br>
     	{% endif %}
     {% endfor %}
-
+	</p>
     <div class="divider"></div>
     <div class="buttons-list pull-right">
         <button class="btn"><a href="mailto:{{ entity.contact }}"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></button>
