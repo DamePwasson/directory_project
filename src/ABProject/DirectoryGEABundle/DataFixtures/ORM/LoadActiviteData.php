@@ -25,7 +25,7 @@ class LoadActiviteData extends AbstractFixture implements OrderedFixtureInterfac
 
     $actgui = new Activite();
     $actgui->setNomActivite('Licence banque finance assurance');
-    $actgui->setDescription('Formation TS+ au lycée sud. 4 mois de cours, 6 mois de stage (3 mois à la Fortis Bank');
+    $actgui->setDescription('Formation TS+ au lycée sud. 4 mois de cours, 6 mois de stage (3 mois à la Fortis Bank)');
     $actgui->setTypeActivite('Poursuite d\'étude');
     $actgui->setAnneeDebut(2005);
     $actgui->setAnneeFin(2006);
