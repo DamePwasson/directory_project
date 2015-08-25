@@ -9,10 +9,10 @@
                 <form action={{ path('etudiant_search') }} method="get">
                     <label for="inputName">Nom :</label>
                     <input type="name" name="query" value='{{ app.request.get('query') }}' class="form-control" id="inputName">
-                    <input class="btn" type="submit" value="search" />
+                    <input class="btn" type="submit" value="Recherche" />
                 </form>
             </p>
-            
+             <button class="btn"><a href="{{ path('etudiant') }}">Retour</a></button>
         </div>
     </div>
 
